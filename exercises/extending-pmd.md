@@ -23,3 +23,22 @@ Use your rule with different projects and describe you findings below. See the [
 
 ## Answer
 
+<rule name="nestedIf"
+      language="java"
+      message="nested if have been detected"
+      class="net.sourceforge.pmd.lang.rule.XPathRule">
+   <description>
+
+   </description>
+   <priority>3</priority>
+   <properties>
+      <property name="version" value="2.0"/>
+      <property name="xpath">
+         <value>
+<![CDATA[
+//IfStatement[count(ancestor::IfStatement)>=2]
+]]>
+         </value>
+      </property>
+   </properties>
+</rule>
